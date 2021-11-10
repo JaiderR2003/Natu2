@@ -11,6 +11,7 @@ include '../../modelo/ControladorArtificial/DatosARController.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="Imagenes/LogoNa.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -68,7 +69,8 @@ include '../../modelo/ControladorArtificial/DatosARController.php';
         <legend class="containter-xl"> Contactenos </legend><br>
         <p class="containter-xl"> Linea Gratuita: <b>01 8000 8888</b> </p>
         <p class="containter-xl"> Correo: <b>NatuPoints@gmail.com </b></p>
-        <br>
+        <li style="display:inline-block;"><a style="color:white;font-size:45px;padding:10px 5px;display:block;transition:all 0.5 ease-in-out;" href="https://www.facebook.com/NatuPoints/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li style="display:inline-block;"><a style="color:white;font-size:45px;padding:10px 5px;display:block;transition:all 0.5 ease-in-out;" href="https://www.instagram.com/natupoints/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
     </footer>
 </body>
 </html>

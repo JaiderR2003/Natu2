@@ -35,9 +35,9 @@
             <p id="textopq"> Es rapido y facil </p>
             <input type="text" placeholder=" Nombre " name="nombre" class="cajitasW" required><br><br>
             <input type="text" placeholder=" Ubicacion " name="ubicacion" class="cajitasW" required><br><br>
-            <textarea placeholder="Descripcion" name="descrip" class="cajitasW" cols="30" rows="10"></textarea><br><br>
+            <textarea placeholder="Descripcion" name="descrip" class="cajitasW" cols="30" rows="10" style="resize:none;"></textarea><br><br>
             <input type="text" placeholder=" URL Imagen " name="image" class="cajitasW" required><br><br>
-            <input type="submit" name="registro" value="Registrarse" class="btn btn-success"><br><br>
+            <input type="submit" name="registro" value="Crear Zona" class="btn btn-success"><br><br>
             <input type="hidden" name="oculto">
         </form>
         <a href="?controlador=crudnatural&accion=consultazonan" class="btn btn-info">Consultar Zonas Naturales Creadas</a>

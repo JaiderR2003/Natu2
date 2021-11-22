@@ -33,11 +33,11 @@
         <form action="modelo/ControladorArtificial/AgregarZonaAController.php" method="POST" class="formularioT">
             <legend class="TituloReg"><b> Registrar Zona Artificial </b></legend>
             <p id="textopq"> Es rapido y facil </p>
-            <input type="text" placeholder=" Nombre " name="nombre" class="cajitasW" required><br><br>
-            <input type="text" placeholder=" Ubicacion " name="ubicacion" class="cajitasW" required><br><br>
-            <textarea placeholder="Descripcion" name="descrip" class="cajitasW" cols="30" rows="10"></textarea><br><br>
+            <input type="text" placeholder=" Nombre " name="nombre" class="cajitasW" pattern="[A-Za-z]{1,100}" required><br><br>
+            <input type="text" placeholder=" Ubicacion " name="ubicacion" class="cajitasW" pattern="[A-Za-z0-9 ]{1,100}" required><br><br>
+            <textarea placeholder="Descripcion" name="descrip" class="cajitasW" cols="30" rows="10" style="resize:none;" pattern="[A-Za-z0-9 ]{1,200}"></textarea><br><br>
             <input type="text" placeholder=" URL Imagen " name="image" class="cajitasW" required><br><br>
-            <input type="submit" name="registro" value="Registrarse" class="btn btn-success"><br><br>
+            <input type="submit" name="registro" value="Crear Zona" class="btn btn-success"><br><br>
             <input type="hidden" name="oculto">
         </form>
         <a href=".?controlador=crudartificial&accion=ConsultaZonaA" class="btn btn-info">Consultar Zonas Artificiales Creadas</a>

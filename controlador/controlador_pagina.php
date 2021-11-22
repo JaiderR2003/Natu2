@@ -1,6 +1,9 @@
 <?php
 
 class ControladorPagina{
+    public function Index(){
+        include_once("vistas/paginas/Index.php");
+    }
     public function inicio(){
         include_once("vistas/paginas/inicio.php");
     }
@@ -18,6 +21,9 @@ class ControladorPagina{
     }
     public function RegistrarUsuario(){
         include_once("vistas/paginas/RegistrarUsuario.php");
+    }
+    public function PaginaX(){
+        include_once("vistas/paginas/Paginax.php");
     }
 }
 

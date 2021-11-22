@@ -16,32 +16,40 @@ include '../../modelo/ControladorArtificial/DatosARController.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   </head>
-  <body style="background-color: #AAD2A9">
-    <header style="display:flex; justify-content: space-between;align-items:center; text-align:right;background-color: #33a24f;margin-bottom:12%;">
-    <div class="container-xxl fw-bolder contenedor__navegador" data-aos="fade-up">
-      <nav class="topnav navbar navbar-expand-xl navbar-light fixed-top bg-light0 navbar-light shadow-sm scrollednav py-2 navegador" style="background-color: #33a24f;text-align:right;width:100%;border-bottom:dashed 2px;">
-      <a href="../../.?controlador=pagina&accion=inicio" class="container-fluid" style="display:flex;float:left;">
-        <img class="container-fluid" src="../../Imagenes/LogoN2.png" style="width: 22%;cursor:pointer;margin-left:-2%;margin-top:-1%;background-color: #33a24f;">
+  <body style="background-color: #AAD2A9" class="container-expand-xl">
+  <div class="container-xxl fw-bolder contenedor__navegador" data-aos="fade-up" style="background-color: #33a24f">
+    <nav class="topnav navbar navbar-expand-xl navbar-light fixed-top bg-light0 navbar-light shadow-sm scrollednav py-2 navegador" style="background-color: #33a24f">
+  <div class="container-xl" style="background-color: #33a24f">
+      <a href="../../.?controlador=pagina&accion=inicio" class="navbar-brand navegador__imagenboton">
+        <img src="../../Imagenes/LogoN2.png" alt="" width="220" height="80" class="d-inline-block align-text-top">
       </a>
-      <div class="collapse navbar-collapse opciones__nav" style="display:flex;float:right;align-content:right;background-color: #33a24f">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse opciones__nav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" style="margin-left:-55%;">
-                <a class="nav-link active" href="../../.?controlador=pagina&accion=inicio" style="text-align:right;font-size:130%;margin-left:-25%;background-color: #33a24f">Inicio</a> 
-        </li>
         <li class="nav-item">
-                <a class="nav-link active" href="../../.?controlador=mapas&accion=mapa" style="text-align:right;font-size:130%;background-color: #33a24f">Mapa</a>       
+            <a class="nav-link active" aria-current="page" href="../../.?controlador=pagina&accion=inicio" style="font-size:22px;">Inicio</a> 
         </li>
-        <li class="nav-item">
-                <a class="nav-link active" href="../../.?controlador=zonas&accion=zona" style="text-align:right;font-size:130%;background-color: #33a24f">Nueva Zona</a> 
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:22px;">
+            Acciones
+          </a>
+          <ul class="dropdown-menu opciones__nav--desplegable" aria-labelledby="navbarDropdown"> 
+            <li><a class="dropdown-item opciones__nav--desplegable" href="../../.?controlador=mapas&accion=mapa">Mapa</a></li>
+            <li><a class="dropdown-item opciones__nav--desplegable" href="../../.?controlador=zonas&accion=zona">Nueva Zona</a></li>
+          </ul>
         </li>
-          </div>
+      </ul>
+      <form class="d-flex" action="../../modelo/ControladorUsuario/Cierre.php" method="POST">
+        <button class="btn btn-outline-warning boton__nav" type="submit" name="botonBuscar">Cerrar Sesion</button>
+      </form>
       </nav>
     </div>
-    </header>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <section>
+    <section style="margin-top:10%;">
     <br>
     <div class="mb-3" style="text-align:center;background-color:#9de0ad;margin-left:18%;margin-right:18%;padding:10px 0 10px 0 ;border:dashed 1px;"modelo/ControladorArtificial/EditarZonaAController.php" method="POST">
     <form action="../../modelo/ControladorArtificial/EditarZonaAController.php" method="POST" class="formularioT">

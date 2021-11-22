@@ -11,29 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   </head>
-  <body style="background-color: #AAD2A9">
-    <header style="display:flex; justify-content: space-between;align-items:center; text-align:right;background-color: #33a24f;margin-bottom:12%;">
-    <div class="container-xxl fw-bolder contenedor__navegador" data-aos="fade-up">
-      <nav class="topnav navbar navbar-expand-xl navbar-light fixed-top bg-light0 navbar-light shadow-sm scrollednav py-2 navegador" style="background-color: #33a24f;text-align:right;width:100%;border-bottom:dashed 2px;">
-      <a href="?controlador=pagina&accion=inicio" class="container-fluid" style="display:flex;float:left;">
-        <img class="container-fluid" src="Imagenes/LogoN2.png" style="width: 22%;cursor:pointer;margin-left:-2%;margin-top:-1%;background-color: #33a24f;">
-      </a>
-      <div class="collapse navbar-collapse opciones__nav" style="display:flex;float:right;align-content:right;background-color: #33a24f">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" style="margin-left:-55%;">
-                <a class="nav-link active" href=".?controlador=pagina&accion=inicio" style="text-align:right;font-size:130%;margin-left:-25%;background-color: #33a24f">Inicio</a> 
-        </li>
-        <li class="nav-item">
-                <a class="nav-link active" href=".?controlador=mapas&accion=mapa" style="text-align:right;font-size:130%;background-color: #33a24f">Mapa</a>       
-        </li>
-        <li class="nav-item">
-                <a class="nav-link active" href=".?controlador=zonas&accion=zona" style="text-align:right;font-size:130%;background-color: #33a24f">Nueva Zona</a> 
-        </li>
-          </div>
-      </nav>
-    </div>
-    </header>
-      <div class="container-sm" style="margin-top:30px;margin-bottom:30px">
+  <body style="background-color: #AAD2A9" class="container-expand-xl">
+      <div class="container-sm" style="margin-top:10%;margin-bottom:10%">
           <div class="row">
               <div class="col-1-12">
                 <?php include_once("router.php"); ?>

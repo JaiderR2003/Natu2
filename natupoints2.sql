@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2021 a las 05:27:39
+-- Tiempo de generación: 22-11-2021 a las 04:42:32
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.3.27
 
@@ -233,14 +233,7 @@ CREATE TABLE `inicio_usuario_natu` (
 --
 
 INSERT INTO `inicio_usuario_natu` (`Correo`, `Contraseña`) VALUES
-('dasdas@jkaskd', '123456'),
-('Andre@gmail.com', 'e10adc3949ba59abbe56e057f20f88'),
-('Camilo@gmail.com', 'e10adc3949ba59abbe56e057f20f88'),
-('jarodriguez98800@misena.edu.co', '9450476b384b32d8ad8b758e76c98a'),
-('dasdas@jkaskd', '123456'),
-('Andre@gmail.com', 'e10adc3949ba59abbe56e057f20f88'),
-('Camilo@gmail.com', 'e10adc3949ba59abbe56e057f20f88'),
-('jarodriguez98800@misena.edu.co', '9450476b384b32d8ad8b758e76c98a');
+('Hernan@gmail.com', '123456');
 
 -- --------------------------------------------------------
 
@@ -263,10 +256,7 @@ CREATE TABLE `usuarios_natu` (
 --
 
 INSERT INTO `usuarios_natu` (`Id_Usuario`, `Nombres`, `Apellidos`, `Fecha_Nacimiento`, `Telefono`, `Correo`, `Contraseña`) VALUES
-(2, 'Vanesa', 'Mendez', '1997-10-16', 312, 'dasdas@jkaskd', '123456'),
-(3, 'Andres', 'Amazo', '2002-08-05', 2147483647, 'Andre@gmail.com', 'e10adc3949ba59abbe56e057f20f88'),
-(4, 'Camilo', 'Perez', '2003-05-08', 2147483647, 'Camilo@gmail.com', 'e10adc3949ba59abbe56e057f20f88'),
-(5, 'Jaider', 'Rodriguez', '2002-08-05', 2147483647, 'jarodriguez98800@misena.edu.co', '9450476b384b32d8ad8b758e76c98a');
+(1, 'Hernan', 'hernandez', '2005-11-10', 2147483647, 'Hernan@gmail.com', '123456');
 
 --
 -- Disparadores `usuarios_natu`
@@ -456,7 +446,7 @@ ALTER TABLE `flora_natu`
 -- AUTO_INCREMENT de la tabla `usuarios_natu`
 --
 ALTER TABLE `usuarios_natu`
-  MODIFY `Id_Usuario` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id_Usuario` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `zonas_artificiales_natu`
@@ -484,8 +474,8 @@ ALTER TABLE `zonas_naturales_natu`
 -- Filtros para la tabla `calificacion_natu`
 --
 ALTER TABLE `calificacion_natu`
-  ADD CONSTRAINT `calificacion_natu_ibfk_7` FOREIGN KEY (`Id_Usuario`) REFERENCES `usuarios_natu` (`Id_Usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `calificacion_natu_ibfk_8` FOREIGN KEY (`ID_Zona`) REFERENCES `zonas_natu` (`ID_Zona`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `calificacion_natu_ibfk_8` FOREIGN KEY (`ID_Zona`) REFERENCES `zonas_natu` (`ID_Zona`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `calificacion_natu_ibfk_9` FOREIGN KEY (`Id_Usuario`) REFERENCES `usuarios_natu` (`Id_Usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `fauna_natu`
@@ -503,7 +493,7 @@ ALTER TABLE `flora_natu`
 -- Filtros para la tabla `inicio_usuario_natu`
 --
 ALTER TABLE `inicio_usuario_natu`
-  ADD CONSTRAINT `inicio_usuario_natu_ibfk_1` FOREIGN KEY (`Correo`) REFERENCES `usuarios_natu` (`Correo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `inicio_usuario_natu_ibfk_1` FOREIGN KEY (`Correo`) REFERENCES `usuarios_natu` (`Correo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `zonas_natu`

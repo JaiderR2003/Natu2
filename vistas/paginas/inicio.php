@@ -1,21 +1,40 @@
+<?php
+session_start();
+if(isset($_SESSION["usuario"])){
+?>
+<div class="container-xxl fw-bolder contenedor__navegador" data-aos="fade-up" style="background-color: #33a24f">
+    <nav class="topnav navbar navbar-expand-xl navbar-light fixed-top bg-light0 navbar-light shadow-sm scrollednav py-2 navegador" style="background-color: #33a24f">
+  <div class="container-xl" style="background-color: #33a24f">
+      <a href="?controlador=pagina&accion=inicio" class="navbar-brand navegador__imagenboton">
+        <img src="Imagenes/LogoN2.png" alt="" width="220" height="80" class="d-inline-block align-text-top">
+      </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse opciones__nav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href=".?controlador=pagina&accion=inicio" style="font-size:22px;">Inicio</a> 
+        </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:22px;">
+            Acciones
+          </a>
+          <ul class="dropdown-menu opciones__nav--desplegable" aria-labelledby="navbarDropdown"> 
+            <li><a class="dropdown-item opciones__nav--desplegable" href=".?controlador=mapas&accion=mapa">Mapa</a></li>
+            <li><a class="dropdown-item opciones__nav--desplegable" href=".?controlador=zonas&accion=zona">Nueva Zona</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" action="modelo/ControladorUsuario/Cierre.php" method="POST">
+        <button class="btn btn-outline-warning boton__nav" type="submit" name="botonBuscar">Cerrar Sesion</button>
+      </form>
+      </nav>
+    </div>
 <section>
         <table class="container-sm">
             <tr>
-                <aside class="container-md" style="text-align:center;float:left; width:36%;background-color:#33a24f;border-radius:15px;border:dashed 1px;color:black;">
-                <form method="POST"> 
-                    <legend class="container-md"><b> INGRESA A TU CUENTA </b></legend>
-                    <h5 class="container-md"> Correo: </h5>
-                    <input type="text" placeholder="Correo Electronico" style="text-align:center;border-radius:8px;" class="container-md" name="Correo" required><br><br>
-                    <h5> Contraseña: </h5>
-                    <input type="password" placeholder="Contraseña" style="text-align:center;border-radius:8px;" class="container-md" name="Contra" required><br><br>
-                    <legend > ¿No tienes cuenta? Registrate<a href="?controlador=pagina&accion=registrarusuario" class="container-md" style="color: red;background-color: #33a24f;">aqui </a></legend><br>
-                    <input type="submit" name="entrar" value="Ingresar" class="btn btn-light container-md" style="width:30%;"><br><br>           
-                    <!-- <?php 
-                        include_once ('Controlador/ValidarInicio.php');
-                    ?> -->
-                </form>
-                </aside>
-                <aside class="container-md" style="text-align:center;float:left; width:50%;background-color:#9de0ad;margin-left:10%;margin-top:1%;margin-bottom:5%;border-radius:15px;border:dashed 1px;font-size:20px;">
+                <aside class="container-md" style="text-align:center;width:50%;background-color:#9de0ad;margin-top:1%;margin-bottom:5%;border-radius:15px;border:dashed 1px;font-size:20px;">
                     <legend class="container-md"><b> Nuestra Pagina </b></legend>
                     <p class="container-md">La pagina NatuPoints está hecha con el proposito de ayudar un poco a la economia turistica del municiío de Soacha. </p>
                     <p class="container-md">En está pagina podrás encontrar diferentes zonas turisticas, tanto naturales como artificiales, las cuales podras encontrar informacion como su ubicacion, algunas fotos, etc.</p>
@@ -67,3 +86,8 @@
             </tr>
         </table>
     </section><br><br><br><br><br><br>
+<?php 
+}else{
+    header("location:vistas/Index.php");
+}
+?>

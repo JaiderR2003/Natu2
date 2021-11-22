@@ -1,6 +1,6 @@
 <?php
     $controlador="pagina";
-    $accion="inicio";
+    $accion="index";
 
     if ( isset($_GET['controlador']) && isset($_GET['accion']) ) {
         
